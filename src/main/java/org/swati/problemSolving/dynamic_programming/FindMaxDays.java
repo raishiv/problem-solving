@@ -22,7 +22,9 @@ public class FindMaxDays {
     private int maxNumberOfDays(int[] arr) {
         return findMaxDays(0, arr);
     }
-
+    
+    //you are missing an edge case. You are not considering the 1st index from the beginning. it will fail when you have
+    //a big number right at 1st index. e.g { 5, 100, 2, 6, 1, 20, 24 }
     private int findMaxDays(int i, int[] arr) {
         if (i == arr.length - 1) {
             return arr[i];
